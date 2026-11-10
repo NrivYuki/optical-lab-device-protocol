@@ -277,7 +277,7 @@ Noise Protocol Framework(第 34 版)の `Noise_XX_25519_ChaChaPoly_SHA256` を�
 
 ## 13. 参照実装
 
-参照実装は、別のリポジトリ optical-lab-device-protocol-reference に置く。機器の側は C(H8/3069F の基板で動くファームウェアを含む)、ホストの側は JavaScript で書かれており、12 章のテストベクタを全て通す。テストの内容、基板で測った値、実装の制限、確かめていないことは、そのリポジトリの文書に示す。
+参照実装は、別のリポジトリ [optical-lab-device-protocol-reference](https://github.com/NrivYuki/optical-lab-device-protocol-reference) に置く。機器の側は C(H8/3069F の基板で動くファームウェアを含む)、ホストの側は JavaScript で書かれており、12 章のテストベクタを全て通す。テストの内容、基板で測った値、実装の制限、確かめていないことは、そのリポジトリの文書に示す。
 
 中身を文字(VCA の行)にした理由は、次のとおりである。参照実装を H8/3069F(20 MHz)で動かして測ったところ、両眼 1440 点の玉型のやり取りは、UART(9600 bps)で 90 秒余り、LAN(10BASE-T)で 30 秒以内に収まり、実用の範囲だった。また、1 行ずつ読めば機器に全体を置かずに済み、DCS との間で変換する必要もない。
 

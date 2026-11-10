@@ -2,7 +2,7 @@
 
 OLDP は Optical Lab Device Protocol の略である。Optical Lab Demo Protocol と読んでもかまわない。
 
-OLDP は、vca-hub に通信方式を加える拡張の用例として作った、デモ用の規格の一例である。
+OLDP は、[vca-hub](https://github.com/NrivYuki/vca-hub) に通信方式を加える拡張の用例として作った、デモ用の規格の一例である。
 
 眼鏡レンズの加工機器(トレーサー・加工機など)とホストの間でジョブをやり取りするための通信規格で、マイコンで動く機器を前提とする。現在の版は第 1.0 版である。規格の本文は [docs/spec.md](docs/spec.md) にある。
 
@@ -35,8 +35,9 @@ python3 tools/gen-vectors.py
 
 | リポジトリ | 中身 |
 |---|---|
-| optical-lab-device-protocol-reference | OLDP の参照実装。機器の側の C(H8/3069F の基板のファームウェアを含む)と、ホストの側の JavaScript。このリポジトリの `spec/` を写して取り込み、テストベクタを通す |
-| vca-hub-extension | vca-hub の拡張。参照実装の JavaScript を使って、OLDP の機器を vca-hub につなぐ |
+| [optical-lab-device-protocol-reference](https://github.com/NrivYuki/optical-lab-device-protocol-reference) | OLDP の参照実装。機器の側の C(H8/3069F の基板のファームウェアを含む)と、ホストの側の JavaScript。このリポジトリの `spec/` を写して取り込み、テストベクタを通す |
+| [vca-hub-extension](https://github.com/NrivYuki/vca-hub-extension) | vca-hub の拡張。参照実装の JavaScript を使って、OLDP の機器を vca-hub につなぐ |
+| [vca-hub](https://github.com/NrivYuki/vca-hub) | VCA(DCS)のデータを受け取り、保存し、中継する常駐プログラム。上の拡張を入れると、OLDP の機器とつながる |
 
 ## ライセンス
 

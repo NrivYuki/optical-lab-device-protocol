@@ -1,0 +1,19 @@
+# テストベクタ(spec/vectors/protocol.json)が、規格の本文から作り直したものと同じかを確かめる
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  vectors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: テストベクタを作り直す
+        run: python3 tools/gen-vectors.py
+      - name: コミットしたものと同じかを確かめる
+        run: git diff --exit-code
